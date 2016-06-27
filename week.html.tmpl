@@ -131,40 +131,40 @@
                 <div class="card" >
                     <h1><i class="fa fa-calendar m-orange" ></i> Този месец</h1>
                     <table class="tablespacer">
-                        <tr><td>Макс. температура</td><td>$week.outTemp.max</td><td>$week.outTemp.maxtime</td></tr>
-                        <tr><td>Мин. температура</td><td>$week.outTemp.min</td><td>$week.outTemp.mintime</td></tr>
-                        <tr><td>Макс. топлинен индекс</td><td>$week.heatindex.max</td><td>$week.heatindex.maxtime</td></tr>
-                        <tr><td>Мин. мразовитост</td><td>$week.windchill.min</td><td>$week.windchill.mintime</td></tr>
-                        <tr><td>Макс. точка на оросяване</td><td>$week.dewpoint.max</td><td>$week.dewpoint.maxtime</td></tr>
-                        <tr><td>Мин. точка на оросяване</td><td>$week.dewpoint.min</td><td>$week.dewpoint.mintime</td></tr>
-                        <tr><td>Макс. влажност</td><td>$week.outHumidity.max</td><td>$week.outHumidity.maxtime</td></tr>
-                        <tr><td>Мин. влажност</td><td>$week.outHumidity.min</td><td>$week.outHumidity.mintime</td></tr>
-                        <tr><td>Макс. налягане</td><td>$week.barometer.max</td><td>$week.barometer.maxtime</td></tr>
-                        <tr><td>Мин. налягане</td><td>$week.barometer.min</td><td>$week.barometer.mintime</td></tr>
-                        <tr><td>Количество дъжд днес</td><td>$week.rain.sum</td><td></td></tr>
-                        <tr><td>Макс. интензивност на дъжда</td><td>$week.rainRate.max</td><td>$week.rainRate.maxtime</td></tr>
-                        <tr><td>Най-силен вятър</td><td>$week.wind.max $week.wind.gustdir</td><td>$week.wind.maxtime</td></tr>
-                        <tr><td>Ср. скорост на вятъра</td><td>$week.wind.avg</td><td></td></tr>
-                        <tr><td><abbr title="Средно квадратно">СК</abbr> на скоростта на вятъра</td><td>$week.wind.rms</td><td></td></tr>
-                        <tr><td>Ср. скорост на векторите на вятъра</td><td>$week.wind.vecavg</td><td></td></tr>
-                        <tr><td>Ср. посока на векторите на вятъра</td><td>$week.wind.vecdir</td><td></td></tr>
-                        <tr><td>Макс. вътрешна температура</td><td>$week.inTemp.max</td><td>$week.inTemp.maxtime</td></tr>
-                        <tr><td>Мин. вътрешна температура</td><td>$week.inTemp.min</td><td>$week.inTemp.mintime</td></tr>
-                        #if $week.extraTemp1.has_data
-                        <tr><td>Макс. температура на езерото</td><td>$week.extraTemp1.max</td><td>$week.extraTemp1.maxtime</td></tr>
-                        <tr><td>Мин. температура на езерото</td><td>$week.extraTemp1.min</td><td>$week.extraTemp1.mintime</td></tr>
+                        <tr><td>Макс. температура</td><td>$month.outTemp.max</td><td>$month.outTemp.maxtime</td></tr>
+                        <tr><td>Мин. температура</td><td>$month.outTemp.min</td><td>$month.outTemp.mintime</td></tr>
+                        <tr><td>Макс. топлинен индекс</td><td>$month.heatindex.max</td><td>$month.heatindex.maxtime</td></tr>
+                        <tr><td>Мин. мразовитост</td><td>$month.windchill.min</td><td>$month.windchill.mintime</td></tr>
+                        <tr><td>Макс. точка на оросяване</td><td>$month.dewpoint.max</td><td>$month.dewpoint.maxtime</td></tr>
+                        <tr><td>Мин. точка на оросяване</td><td>$month.dewpoint.min</td><td>$month.dewpoint.mintime</td></tr>
+                        <tr><td>Макс. влажност</td><td>$month.outHumidity.max</td><td>$month.outHumidity.maxtime</td></tr>
+                        <tr><td>Мин. влажност</td><td>$month.outHumidity.min</td><td>$month.outHumidity.mintime</td></tr>
+                        <tr><td>Макс. налягане</td><td>$month.barometer.max</td><td>$month.barometer.maxtime</td></tr>
+                        <tr><td>Мин. налягане</td><td>$month.barometer.min</td><td>$month.barometer.mintime</td></tr>
+                        <tr><td>Количество дъжд днес</td><td>$month.rain.sum</td><td></td></tr>
+                        <tr><td>Макс. интензивност на дъжда</td><td>$month.rainRate.max</td><td>$month.rainRate.maxtime</td></tr>
+                        <tr><td>Най-силен вятър</td><td>$month.wind.max $month.wind.gustdir</td><td>$month.wind.maxtime</td></tr>
+                        <tr><td>Ср. скорост на вятъра</td><td>$month.wind.avg</td><td></td></tr>
+                        <tr><td><abbr title="Средно квадратно">СК</abbr> на скоростта на вятъра</td><td>$month.wind.rms</td><td></td></tr>
+                        <tr><td>Ср. скорост на векторите на вятъра</td><td>$month.wind.vecavg</td><td></td></tr>
+                        <tr><td>Ср. посока на векторите на вятъра</td><td>$month.wind.vecdir</td><td></td></tr>
+                        <tr><td>Макс. вътрешна температура</td><td>$month.inTemp.max</td><td>$month.inTemp.maxtime</td></tr>
+                        <tr><td>Мин. вътрешна температура</td><td>$month.inTemp.min</td><td>$month.inTemp.mintime</td></tr>
+                        #if $month.extraTemp1.has_data
+                        <tr><td>Макс. температура на езерото</td><td>$month.extraTemp1.max</td><td>$month.extraTemp1.maxtime</td></tr>
+                        <tr><td>Мин. температура на езерото</td><td>$month.extraTemp1.min</td><td>$month.extraTemp1.mintime</td></tr>
                         #end if
-                        #if $week.UV.has_data
-                        <tr><td>Макс. УВ индекс</td><td>$week.UV.max</td><td>$week.UV.maxtime</td></tr>
-                        <tr><td>Мин. УВ индекс</td><td>$week.UV.min</td><td>$week.UV.mintime</td></tr>
+                        #if $month.UV.has_data
+                        <tr><td>Макс. УВ индекс</td><td>$month.UV.max</td><td>$month.UV.maxtime</td></tr>
+                        <tr><td>Мин. УВ индекс</td><td>$month.UV.min</td><td>$month.UV.mintime</td></tr>
                         #end if
-                        #if $week.ET.has_data and $week.ET.sum.raw >0.0
-                        <tr><td>Макс. ET</td><td>$week.ET.max</td><td>$week.ET.maxtime</td></tr>
-                        <tr><td>Мин. ET</td><td>$week.ET.min</td><td>$week.ET.mintime</td></tr>
+                        #if $month.ET.has_data and $month.ET.sum.raw >0.0
+                        <tr><td>Макс. ET</td><td>$month.ET.max</td><td>$month.ET.maxtime</td></tr>
+                        <tr><td>Мин. ET</td><td>$month.ET.min</td><td>$month.ET.mintime</td></tr>
                         #end if
-                        #if $week.radiation.has_data
-                        <tr><td>Макс. радиация</td><td>$week.radiation.max</td><td>$week.radiation.maxtime</td></tr>
-                        <tr><td>Мин. радиация</td><td>$week.radiation.min</td><td>$week.radiation.mintime</td></tr>
+                        #if $month.radiation.has_data
+                        <tr><td>Макс. радиация</td><td>$month.radiation.max</td><td>$month.radiation.maxtime</td></tr>
+                        <tr><td>Мин. радиация</td><td>$month.radiation.min</td><td>$month.radiation.mintime</td></tr>
                         #end if
                     </table>
                 </div>
