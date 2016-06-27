@@ -8,11 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-        <title>$station.location – годишно метеорологично обобщение</title>
+        <title>$station.location – Годишно метеорологично обобщение</title>
 
         <!-- Open Graph -->
-        <meta property="og:site_name" content="$station.location Yearly Weather Summary" />
-        <meta property="og:description" content="Yearly Weather Summary from $station.location - weather web site powered by weewx" />
+        <meta property="og:site_name" content="$station.location – Годишно метеорологично обобщение" />
+        <meta property="og:description" content="Годишно метеорологично обобщение от $station.location" />
 	<meta property="og:type" content="website" />
 
         <!-- Icons -->
@@ -45,34 +45,34 @@
                 <div class="h-left" >
                 <h1><i class="fa fa-cloud" ></i> $station.location</h1>
                 <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2] | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2] | $station.altitude | <a href="https://www.google.com/maps/?q=$station.location" target="_blank" ><i class="fa fa-map-marker" ></i> Show on map</a></p>
-                <h2>Yearly Weather Summary</h2>
+                <h2>Годишно метеорологично обобщение</h2>
                 <p><i class="fa fa-clock-o" ></i> $current.dateTime</p>
                 </div>
 
                 <div class="h-right" >
                     <table>
-                        <tr><td><b>Station:</b></td><td>$station.hardware</td></tr>
-                        <tr><td><b>Software:</b></td><td><a href="http://weewx.com/" target="_blank" >weewx v$station.version</a></td></tr>
-                        <tr><td><b>Weewx uptime:</b></td><td>$station.uptime</td></tr>
-                        <tr><td><b>Server uptime:</b></td><td>$station.os_uptime</td></tr>
+                        <tr><td><b>Станция:</b></td><td>$station.hardware</td></tr>
+                        <tr><td><b>Софтуер:</b></td><td><a href="http://weewx.com/" target="_blank" >weewx v$station.version</a></td></tr>
+                        <tr><td><b>Време на работа на софтуера:</b></td><td>$station.uptime</td></tr>
+                        <tr><td><b>Време на работа на сървъра:</b></td><td>$station.os_uptime</td></tr>
                     </table>
                 </div>
 
                 <nav>
                     <ul>
-                        <li><a href="index.html" >Current</a></li>
-                        <li><a href="week.html" >Week</a></li>
-                        <li><a href="month.html" >Month</a></li>
-                        <li class="active" ><a href="year.html" >Year</a></li>
+                        <li><a href="index.html" >Сега</a></li>
+                        <li><a href="week.html" >Седмица</a></li>
+                        <li><a href="month.html" >Месец</a></li>
+                        <li class="active"><a href="year.html" >Година</a></li>
                         <li><a href="RSS/weewx_rss.xml" >RSS</a></li>
                         <li><select name="noaaselect" onchange="openNoaaFile(value)">
-                                <option>Monthly summary</option>
+                                <option>Месечно обобщение</option>
                                 #for $monthYear in $SummaryByMonth
                                     <option value="$monthYear">$monthYear</option>
                                 #end for
                             </select></li>
                         <li><select name="noaaselect" onchange="openNoaaFile(value)">
-                                <option>Yearly summary</option>
+                                <option>Годишно обобщение</option>
                                 #for $yr in $SummaryByYear
                                     <option value="$yr">$yr</option>
                                 #end for
@@ -88,49 +88,51 @@
             <div class="left" >
 
                 <div class="card" >
-                    <h1><i class="fa fa-calendar-o m-rot" ></i> Calendar Year</h1>
+                    <h1><i class="fa fa-calendar-o m-rot" ></i> Календарна година</h1>
                     <table class="tablespacer">
-                        <tr><td>High Temperature</td><td>$year.outTemp.max</td><td>$year.outTemp.maxtime</td></tr>
-                        <tr><td>Low Temperature</td><td>$year.outTemp.min</td><td>$year.outTemp.mintime</td></tr>
-                        <tr><td>High Heat Index</td><td>$year.heatindex.max</td><td>$year.heatindex.maxtime</td></tr>
-                        <tr><td>Low Wind Chill</td><td>$year.windchill.min</td><td>$year.windchill.mintime</td></tr>
-                        <tr><td>High Dewpoint</td><td>$year.dewpoint.max</td><td>$year.dewpoint.maxtime</td></tr>
-                        <tr><td>Low Dewpoint</td><td>$year.dewpoint.min</td><td>$year.dewpoint.mintime</td></tr>
-                        <tr><td>High Humidity</td><td>$year.outHumidity.max</td><td>$year.outHumidity.maxtime</td></tr>
-                        <tr><td>Low Humidity</td><td>$year.outHumidity.min</td><td>$year.outHumidity.mintime</td></tr>
-                        <tr><td>High Barometer</td><td>$year.barometer.max</td><td>$year.barometer.maxtime</td></tr>
-                        <tr><td>Low Barometer</td><td>$year.barometer.min</td><td>$year.barometer.mintime</td></tr>
-                        <tr><td>High Wind Speed</td><td>$year.wind.max $year.wind.gustdir</td><td>$year.wind.maxtime</td></tr>
-                        <tr><td>Average Wind</td><td>$year.wind.avg</td><td></td></tr>
-                        <tr><td>RMS Wind</td><td>$year.wind.rms</td><td></td></tr>
-                        <tr><td>Vector Average Speed</td><td>$year.wind.vecavg</td><td></td></tr>
-                        <tr><td>Vector Average Direction</td><td>$year.wind.vecdir</td><td></td></tr>
-                        <tr><td>High Inside Temperature</td><td>$year.inTemp.max</td><td>$year.inTemp.maxtime</td></tr>
-                        <tr><td>Low Inside Temperature</td><td>$year.inTemp.min</td><td>$year.inTemp.mintime</td></tr>
+                        <tr><td>Макс. температура</td><td>$year.outTemp.max</td><td>$year.outTemp.maxtime</td></tr>
+                        <tr><td>Мин. температура</td><td>$year.outTemp.min</td><td>$year.outTemp.mintime</td></tr>
+                        <tr><td>Макс. топлинен индекс</td><td>$year.heatindex.max</td><td>$year.heatindex.maxtime</td></tr>
+                        <tr><td>Мин. мразовитост</td><td>$year.windchill.min</td><td>$year.windchill.mintime</td></tr>
+                        <tr><td>Макс. точка на оросяване</td><td>$year.dewpoint.max</td><td>$year.dewpoint.maxtime</td></tr>
+                        <tr><td>Мин. точка на оросяване</td><td>$year.dewpoint.min</td><td>$year.dewpoint.mintime</td></tr>
+                        <tr><td>Макс. влажност</td><td>$year.outHumidity.max</td><td>$year.outHumidity.maxtime</td></tr>
+                        <tr><td>Мин. влажност</td><td>$year.outHumidity.min</td><td>$year.outHumidity.mintime</td></tr>
+                        <tr><td>Макс. налягане</td><td>$year.barometer.max</td><td>$year.barometer.maxtime</td></tr>
+                        <tr><td>Мин. налягане</td><td>$year.barometer.min</td><td>$year.barometer.mintime</td></tr>
+                        <tr><td>Количество дъжд днес</td><td>$year.rain.sum</td><td></td></tr>
+                        <tr><td>Макс. интензивност на дъжда</td><td>$year.rainRate.max</td><td>$year.rainRate.maxtime</td></tr>
+                        <tr><td>Най-силен вятър</td><td>$year.wind.max $year.wind.gustdir</td><td>$year.wind.maxtime</td></tr>
+                        <tr><td>Ср. скорост на вятъра</td><td>$year.wind.avg</td><td></td></tr>
+                        <tr><td><abbr title="Средно квадратно">СК</abbr> на скоростта на вятъра</td><td>$year.wind.rms</td><td></td></tr>
+                        <tr><td>Ср. скорост на векторите на вятъра</td><td>$year.wind.vecavg</td><td></td></tr>
+                        <tr><td>Ср. посока на векторите на вятъра</td><td>$year.wind.vecdir</td><td></td></tr>
+                        <tr><td>Макс. вътрешна температура</td><td>$year.inTemp.max</td><td>$year.inTemp.maxtime</td></tr>
+                        <tr><td>Мин. вътрешна температура</td><td>$year.inTemp.min</td><td>$year.inTemp.mintime</td></tr>
                         #if $year.extraTemp1.has_data
-                        <tr><td>High Pond Temp</td><td>$year.extraTemp1.max</td><td>$year.extraTemp1.maxtime</td></tr>
-                        <tr><td>Low Pond Temp</td><td>$year.extraTemp1.min</td><td>$year.extraTemp1.mintime</td></tr>
+                        <tr><td>Макс. температура на езерото</td><td>$year.extraTemp1.max</td><td>$year.extraTemp1.maxtime</td></tr>
+                        <tr><td>Мин. температура на езерото</td><td>$year.extraTemp1.min</td><td>$year.extraTemp1.mintime</td></tr>
                         #end if
                         #if $year.UV.has_data
-                        <tr><td>High UV</td><td>$year.UV.max</td><td>$year.UV.maxtime</td></tr>
-                        <tr><td>Low UV</td><td>$year.UV.min</td><td>$year.UV.mintime</td></tr>
+                        <tr><td>Макс. УВ индекс</td><td>$year.UV.max</td><td>$year.UV.maxtime</td></tr>
+                        <tr><td>Мин. УВ индекс</td><td>$year.UV.min</td><td>$year.UV.mintime</td></tr>
                         #end if
                         #if $year.ET.has_data and $year.ET.sum.raw >0.0
-                        <tr><td>High ET</td><td>$year.ET.max</td><td>$year.ET.maxtime</td></tr>
-                        <tr><td>Low ET</td><td>$year.ET.min</td><td>$year.ET.mintime</td></tr>
+                        <tr><td>Макс. ET</td><td>$year.ET.max</td><td>$year.ET.maxtime</td></tr>
+                        <tr><td>Мин. ET</td><td>$year.ET.min</td><td>$year.ET.mintime</td></tr>
                         #end if
                         #if $year.radiation.has_data
-                        <tr><td>High Radiation</td><td>$year.radiation.max</td><td>$year.radiation.maxtime</td></tr>
-                        <tr><td>Low Radiation</td><td>$year.radiation.min</td><td>$year.radiation.mintime</td></tr>
+                        <tr><td>Макс. радиация</td><td>$year.radiation.max</td><td>$year.radiation.maxtime</td></tr>
+                        <tr><td>Мин. радиация</td><td>$year.radiation.min</td><td>$year.radiation.mintime</td></tr>
                         #end if
                     </table>
                 </div>
 
                 <div class="card" >
-                    <h1><i class="fa fa-cloud m-blau" ></i> Rain Year (1-$station.rain_year_str start)</h1>
+                    <h1><i class="fa fa-cloud m-blau" ></i> Дъждовна година (1-$station.rain_year_str start)</h1>
                     <table class="tablespacer">
-                        <tr><td>Rain Year Total</td><td>$rainyear.rain.sum</td><td></td></tr>
-                        <tr><td>High Rain Rate</td><td>$rainyear.rainRate.max</td><td>$rainyear.rainRate.maxtime</td></tr>
+                        <tr><td>Общо количество дъжд</td><td>$rainyear.rain.sum</td><td></td></tr>
+                        <tr><td>Най-интензивен дъжд</td><td>$rainyear.rainRate.max</td><td>$rainyear.rainRate.maxtime</td></tr>
                     </table>
                 </div>
 
@@ -139,7 +141,7 @@
             <div class="right" >
 
                 <div class="card cc graphs" >
-                    <h1><i class="fa fa-line-chart m-gruen" ></i> Yearly Statistics and Plots</h1>
+                    <h1><i class="fa fa-line-chart m-gruen" ></i> Годишна статистика и графики</h1>
 
                     <img src="yeartempdew.png" alt="temperatures" />
                     <img src="yeartempchill.png" alt="heatchill" />
@@ -174,7 +176,7 @@
 
         <footer>
             <div class="container-fix" >
-            All rights reserved. &copy; 2014
+            Всички права запазени. &copy; 2016
             #if $Extras.has_key('you')
             $Extras.you
             #end if
