@@ -96,9 +96,9 @@
                         <tr><td>Точка на оросяване</td><td>$current.dewpoint</td></tr>
                         <tr><td>Влажност</td><td>$current.outHumidity</td></tr>
                         <tr><td>Налягане</td><td>$current.pressure</td></tr>
-                        <tr><td>Барометър</td><td>$current.barometer</td></tr>
+                        <tr><td><abbr title="Налягане, коригирано за надморска височина, температура и влажност.">Барометър</abbr></td><td>$current.barometer</td></tr>
                         <tr><td>Висотомер</td><td>$current.altimeter</td></tr>
-                        <tr><td>Тенденция на барометъра ($trend.time_delta.hour.format("%.0f"))</td><td>$trend.barometer</td></tr>
+                        <tr><td>Тенденция на <abbr title="Налягане, коригирано за надморска височина, температура и влажност.">барометъра</abbr> ($trend.time_delta.hour.format("%.0f"))</td><td>$trend.barometer</td></tr>
                         <tr><td>Вятър</td><td>$current.windSpeed $current.windDir.ordinal_compass ($current.windDir)</td></tr>
                         <tr><td>Интензивност на дъжда</td><td>$current.rainRate</td></tr>
                         <tr><td>Вътрешна температура</td><td>$current.inTemp</td></tr>
@@ -128,8 +128,8 @@
                         <tr><td>Мин. точка на оросяване</td><td>$day.dewpoint.min</td><td>$day.dewpoint.mintime</td></tr>
                         <tr><td>Макс. влажност</td><td>$day.outHumidity.max</td><td>$day.outHumidity.maxtime</td></tr>
                         <tr><td>Мин. влажност</td><td>$day.outHumidity.min</td><td>$day.outHumidity.mintime</td></tr>
-                        <tr><td>Макс. налягане (барометър)</td><td>$day.barometer.max</td><td>$day.barometer.maxtime</td></tr>
-                        <tr><td>Мин. налягане (барометър)</td><td>$day.barometer.min</td><td>$day.barometer.mintime</td></tr>
+                        <tr><td>Макс. налягане (<abbr title="Налягане, коригирано за надморска височина, температура и влажност.">барометър</abbr>)</td><td>$day.barometer.max</td><td>$day.barometer.maxtime</td></tr>
+                        <tr><td>Мин. налягане (<abbr title="Налягане, коригирано за надморска височина, температура и влажност.">барометър</abbr>)</td><td>$day.barometer.min</td><td>$day.barometer.mintime</td></tr>
                         <tr><td>Количество дъжд днес</td><td>$day.rain.sum</td><td></td></tr>
                         <tr><td>Макс. интензивност на дъжда</td><td>$day.rainRate.max</td><td>$day.rainRate.maxtime</td></tr>
                         <tr><td>Най-силен вятър</td><td>$day.wind.max $day.wind.gustdir</td><td>$day.wind.maxtime</td></tr>
