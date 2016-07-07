@@ -42,14 +42,16 @@
     <body>
         <header>
             <div class="container-fix" >
-                <div class="h-left" >
                 <h1><i class="fa fa-cloud" ></i> $station.location</h1>
+            </div>
+            <div class="container-fix" >
+                <div class="h-left vertical-align-top" >
                 <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]Ш | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]Д | $station.altitude | <a href="https://www.google.com/maps/?q=$station.location" target="_blank" ><i class="fa fa-map-marker" ></i> Покажи на картата</a></p>
                 <h2>Месечно метеорологично обобщение</h2>
                 <p><i class="fa fa-clock-o" ></i> $current.dateTime</p>
                 </div>
 
-                <div class="h-right" >
+                <div class="h-right vertical-align-top" >
                     <table>
                         <tr><td><b>Станция:</b></td><td>$station.hardware</td></tr>
                         <tr><td><b>Софтуер:</b></td><td><a href="http://weewx.com/" target="_blank" >weewx v$station.version</a></td></tr>
