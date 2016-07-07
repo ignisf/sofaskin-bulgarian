@@ -18,50 +18,50 @@ header {
     color: #fff;
     font-weight: 300;
     padding: 1em 0 0 0;
-    
+
     a { color: $nav-link-color; transition: all 0.2s; }
     a:hover { color: $nav-link-color-hover; }
-    
+
     h1 {
         font-size: 1.8em;
         font-weight: normal;
         margin: 0.1em 0em;
         padding: 0;
     }
-    
+
     h2 {
         font-size: 1.4em;
         font-weight: normal;
         margin: 0.1em 0;
         padding: 0;
     }
-    
+
     p {
         margin: 0.1em 0 0.2em 0;
         padding: 0;
     }
-    
+
     .h-left {
         display: inline-block;
         width: 48%;
         text-align: left;
     }
-    
+
     .h-right {
         display: inline-block;
         width: 48%;
         text-align: right;
-        
+
         table {
             float: right;
             border: none;
-            
+
             td {
                 padding: 0.1em 0.4em;
             }
         }
     }
-    
+
     nav {
         display: inline-block;
         text-align: left;
@@ -69,7 +69,7 @@ header {
         font-size: 1.4em;
         font-weight: 400;
         margin: 2em 0 0 0;
-        
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -85,7 +85,7 @@ header {
         a {
             display: block;
         }
-        
+
         select {
             display: block;
             font-size: 0.8em;
@@ -99,7 +99,7 @@ header {
             background: $header-bg;
             color: #fff;
         }
-        
+
         a {
             color: $nav-link-color;
             transition: all 0.2s;
@@ -107,7 +107,7 @@ header {
         a:hover {
             color: $nav-link-color-hover;
         }
-        
+
         li.active {
             border-bottom: 3px solid $active-color;
             a {
@@ -120,14 +120,14 @@ header {
 .container {
     display: inline-block;
     width: 1500px;
-    
+
     .left {
         display: inline-block;
         width: 590px;
         vertical-align: top;
         margin-right: 1.5em;
     }
-    
+
     .right {
         display: inline-block;
         width: 860px;
@@ -147,15 +147,15 @@ header {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    
+
 -webkit-box-shadow: 0px 0px 6px 0px rgba(201,201,201,1);
 -moz-box-shadow: 0px 0px 6px 0px rgba(201,201,201,1);
 box-shadow: 0px 0px 6px 0px rgba(201,201,201,1);
-    
+
     img {
         max-width: 98%;
     }
-    
+
     h1 {
         width: 100%;
         text-align: left;
@@ -165,23 +165,23 @@ box-shadow: 0px 0px 6px 0px rgba(201,201,201,1);
         padding: 0;
         border-bottom: 1px solid $hellgrau;
     }
-    
+
     h3 {
         margin: 0.4em 0;
         padding: 0;
         color: $dunkelgrau;
     }
-    
+
     table {
         border: none;
         width: 100%;
-        
+
         td {
             margin: 0.2em;
             padding: 0.2em 0;
         }
     }
-    
+
     a {
         color: $normal-link-color;
         transition: all 0.2s;
@@ -203,7 +203,7 @@ footer {
     background: $header-bg;
     color: #fff;
     padding: 1.5em 0;
-    
+
     a { color: $footer-link-color; transition: all 0.2s; }
     a:hover { color: $footer-link-color-hover; }
 }
@@ -233,7 +233,7 @@ table.tablespacer {
     td {
         padding: 0.3em 0;
     }
-    
+
     tr:not(:last-child)  {
         border-bottom: 1px solid $hellgrau;
     }
@@ -249,54 +249,54 @@ table.tablespacer {
 // ---
 // RESPONSIVE
 // ---
-@media (max-width: 1550px) and (min-width: 1210px) { 
+@media (max-width: 1550px) and (min-width: 1210px) {
     .container {
         width: 1200px!important;
-        
+
         .left {
             width: 450px!important;
             margin-right: 0.8em!important;
         }
-        
+
         .right {
             width: 700px!important;
         }
     }
-    
+
     .graphs {
         img {
             margin: 0.3em 0!important;
             max-width: 100%!important;
         }
     }
-    
+
     img.small {
         max-width: 100%!important;
     }
-    
+
 }
 
-@media (max-width: 1209px) and (min-width: 1010px) { 
+@media (max-width: 1209px) and (min-width: 1010px) {
     .container {
         width: 920px!important;
-        
+
         .left {
             width: 290px!important;
             margin-right: 0.8em!important;
         }
-        
+
         .right {
             width: 580px!important;
         }
     }
-    
+
     .graphs {
         img {
             margin: 0.3em 0!important;
             max-width: 100%!important;
         }
     }
-    
+
     img.small {
         max-width: 100%!important;
     }
@@ -305,40 +305,40 @@ table.tablespacer {
 @media (max-width: 1009px) {
     .container {
         width: 100%!important;
-        
+
         .left {
             width: 100%!important;
             margin: 0!important;
         }
-        
+
         .right {
             width: 100%!important;
         }
     }
-    
+
     .container-fix {
         width: 100%;
     }
-    
+
     .graphs {
         img {
             margin: 0.2em 0!important;
             max-width: 100%!important;
         }
     }
-    
+
     img.small {
         max-width: 100%!important;
     }
-    
+
     .haelfte {
         width: 100%!important;
     }
-    
+
     .card {
         margin: 1em 0;
     }
-    
+
     header {
         width: 100%;
         box-sizing: border-box;
