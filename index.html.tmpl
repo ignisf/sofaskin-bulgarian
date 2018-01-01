@@ -225,6 +225,52 @@
 
             <div class="right" >
 
+                <div class="card cc graphs" >
+                    <h1><i class="fa fa-line-chart m-gruen" ></i> Графики</h1>
+
+                    <img src="daytempdew.png" alt="temperatures" />
+                    <img src="daytempchill.png" alt="heatchill" />
+                    <img src="dayinside.png" alt="Inside" />
+                    <img src="daybarometer.png" alt="barometer"/>
+                    <img src="dayrain.png" alt="rain" />
+                    <div>
+                      <img src="Bootstrap/windRoseGauge.png" alt="wind rose"/>
+                      <br>
+                      Роза на вятъра
+                    </div>
+                    <div class="wind-gauge">
+                      <img src="windDirGauge.png" alt="wind direction"/>
+                      Посока на вятъра
+                      <br>
+                    </div>
+                    <div class="wind-gauge">
+                      <img src="windSpeedGauge.png" alt="wind speed"/>
+                      <br>
+                      Скорост на вятъра
+                    </div>
+                    <div class="wind-gauge">
+                      <img src="windGustGauge.png" alt="wind gust speed"/>
+                      <br>
+                      Скорост на поривите
+                    </div>
+                    <img src="daywind.png" alt="wind" />
+                    <img src="daywinddir.png" alt="Hi Wind" />
+                    <img src="daywindvec.png" alt="Wind Vector" />
+                    <img src="dayhumidity.png" alt="humidity" />
+                    #if $day.radiation.has_data
+                    <img src="dayradiation.png" alt="Radiation" />
+                    #end if
+                    #if $day.UV.has_data
+                    <img src="dayuv.png" alt="UV Index" />
+                    #end if
+                    #if $day.rxCheckPercent.has_data
+                    <img src="dayrx.png" alt="day rx percent"/>
+                    #end if
+                    #if $day.extraTemp1.has_data
+                    <img src="daypond.png" alt="Pond Temperatures" />
+                    #end if
+                </div>
+
                 <div class="card" >
                     <h1><i class="fa fa-star-o m-rot" ></i> Алманах</h1>
                     #if $almanac.hasExtras
@@ -285,52 +331,6 @@
                         <tr><td>Залез:</td><td>$almanac.sunset</td></tr>
                         <tr><td>Лунна фаза:</td><td>$almanac.moon_phase<br/>($almanac.moon_fullness% full)</td></tr>
                     </table>
-                    #end if
-                </div>
-
-                <div class="card cc graphs" >
-                    <h1><i class="fa fa-line-chart m-gruen" ></i> Графики</h1>
-
-                    <img src="daytempdew.png" alt="temperatures" />
-                    <img src="daytempchill.png" alt="heatchill" />
-                    <img src="dayhumidity.png" alt="humidity" />
-                    <img src="dayrain.png" alt="rain" />
-                    <img src="daybarometer.png" alt="barometer"/>
-                    <div>
-                      <img src="Bootstrap/windRoseGauge.png" alt="wind rose"/>
-                      <br>
-                      Роза на вятъра
-                    </div>
-                    <div class="wind-gauge">
-                      <img src="windDirGauge.png" alt="wind direction"/>
-                      Посока на вятъра
-                      <br>
-                    </div>
-                    <div class="wind-gauge">
-                      <img src="windSpeedGauge.png" alt="wind speed"/>
-                      <br>
-                      Скорост на вятъра
-                    </div>
-                    <div class="wind-gauge">
-                      <img src="windGustGauge.png" alt="wind gust speed"/>
-                      <br>
-                      Скорост на поривите
-                    </div>
-                    <img src="daywind.png" alt="wind" />
-                    <img src="daywinddir.png" alt="Hi Wind" />
-                    <img src="daywindvec.png" alt="Wind Vector" />
-                    <img src="dayinside.png" alt="Inside" />
-                    #if $day.radiation.has_data
-                    <img src="dayradiation.png" alt="Radiation" />
-                    #end if
-                    #if $day.UV.has_data
-                    <img src="dayuv.png" alt="UV Index" />
-                    #end if
-                    #if $day.rxCheckPercent.has_data
-                    <img src="dayrx.png" alt="day rx percent"/>
-                    #end if
-                    #if $day.extraTemp1.has_data
-                    <img src="daypond.png" alt="Pond Temperatures" />
                     #end if
                 </div>
 
