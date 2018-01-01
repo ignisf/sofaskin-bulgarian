@@ -120,6 +120,14 @@
                     </table>
                 </div>
 
+                #if $Extras.has_key('webcam_img')
+                <div class="card" >
+                  <a href="$Extras.webcam_img" target="_blank">
+                    <img src="$Extras.webcam_img" alt="Webcam" class="space small" />
+                  </a>
+                </div>
+                #end if
+                
                 <div class="card" >
                     <h1><i class="fa fa-moon-o m-grau" ></i> От полунощ насам</h1>
                     <table class="tablespacer">
@@ -160,14 +168,6 @@
                         #end if
                     </table>
                 </div>
-
-                #if $Extras.has_key('webcam_img')
-                <div class="card" >
-                  <a href="$Extras.webcam_img" target="_blank">
-                    <img src="$Extras.webcam_img" alt="Webcam" class="space small" />
-                  </a>
-                </div>
-                #end if
 
                 #if $Extras.has_key('radar_img')
                 <div class="card" >
