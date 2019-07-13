@@ -46,7 +46,7 @@
             </div>
             <div class="container-fix" >
                 <div class="h-left vertical-align-top" >
-                <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]Ш | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]Д | $station.altitude | <a href="https://www.google.com/maps/?q=$station.location" target="_blank" ><i class="fa fa-map-marker" ></i> Покажи на картата</a></p>
+                <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2] | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2] | $station.altitude | <a href="https://www.google.com/maps/?q=$station.location" target="_blank" ><i class="fa fa-map-marker" ></i> Покажи на картата</a></p>
                 <h2>Месечно метеорологично обобщение</h2>
                 <p><i class="fa fa-clock-o" ></i> $current.dateTime</p>
                 </div>
@@ -109,8 +109,8 @@
                         <tr><td><abbr title="Средно квадратично">СК</abbr> на скоростта на вятъра</td><td>$month.wind.rms</td><td></td></tr>
                         <tr><td>Ср. скорост на векторите на вятъра</td><td>$month.wind.vecavg</td><td></td></tr>
                         <tr><td>Ср. посока на векторите на вятъра</td><td>$month.wind.vecdir</td><td></td></tr>
-                        <tr><td>Макс. вътрешна температура</td><td>$month.inTemp.max</td><td>$month.inTemp.maxtime</td></tr>
-                        <tr><td>Мин. вътрешна температура</td><td>$month.inTemp.min</td><td>$month.inTemp.mintime</td></tr>
+                        <tr><td>Макс. температура (вътре)</td><td>$month.inTemp.max</td><td>$month.inTemp.maxtime</td></tr>
+                        <tr><td>Мин. температура (вътре)</td><td>$month.inTemp.min</td><td>$month.inTemp.mintime</td></tr>
                         #if $month.extraTemp1.has_data
                         <tr><td>Макс. температура на езерото</td><td>$month.extraTemp1.max</td><td>$month.extraTemp1.maxtime</td></tr>
                         <tr><td>Мин. температура на езерото</td><td>$month.extraTemp1.min</td><td>$month.extraTemp1.mintime</td></tr>
@@ -150,8 +150,8 @@
                         <tr><td><abbr title="Средно квадратично">СК</abbr> на скоростта на вятъра</td><td>$year.wind.rms</td><td></td></tr>
                         <tr><td>Ср. скорост на векторите на вятъра</td><td>$year.wind.vecavg</td><td></td></tr>
                         <tr><td>Ср. посока на векторите на вятъра</td><td>$year.wind.vecdir</td><td></td></tr>
-                        <tr><td>Макс. вътрешна температура</td><td>$year.inTemp.max</td><td>$year.inTemp.maxtime</td></tr>
-                        <tr><td>Мин. вътрешна температура</td><td>$year.inTemp.min</td><td>$year.inTemp.mintime</td></tr>
+                        <tr><td>Макс. температура (вътре)</td><td>$year.inTemp.max</td><td>$year.inTemp.maxtime</td></tr>
+                        <tr><td>Мин. температура (вътре)</td><td>$year.inTemp.min</td><td>$year.inTemp.mintime</td></tr>
                         #if $year.extraTemp1.has_data
                         <tr><td>Макс. температура на езерото</td><td>$year.extraTemp1.max</td><td>$year.extraTemp1.maxtime</td></tr>
                         <tr><td>Мин. температура на езерото</td><td>$year.extraTemp1.min</td><td>$year.extraTemp1.mintime</td></tr>

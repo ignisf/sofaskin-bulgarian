@@ -8,11 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-        <title>$station.location – текущи метеорологични условия</title>
+        <title>$station.location – настоящи метеорологични условия</title>
 
         <!-- Open Graph -->
-        <meta property="og:site_name" content="$station.location Текущи метеорологични условия" />
-        <meta property="og:description" content="Текущи метеорологични условия в $station.location" />
+        <meta property="og:site_name" content="$station.location Настоящи метеорологични условия" />
+        <meta property="og:description" content="Настоящи метеорологични условия в $station.location" />
 		<meta property="og:type" content="website" />
 
         <!-- Icons -->
@@ -46,8 +46,8 @@
             </div>
             <div class="container-fix" >
                 <div class="h-left vertical-align-top" >
-                <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]Ш | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]Д | $station.altitude | <a href="https://www.google.com/maps/?q=$station.location" target="_blank" ><i class="fa fa-map-marker" ></i> Покажи на картата</a></p>
-                <h2>Текущи метеорологични условия</h2>
+                <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2] | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2] | $station.altitude | <a href="https://www.google.com/maps/?q=$station.location" target="_blank" ><i class="fa fa-map-marker" ></i> Покажи на картата</a></p>
+                <h2>Настоящи метеорологични условия</h2>
                 <p><i class="fa fa-clock-o" ></i> $current.dateTime</p>
                 </div>
 
@@ -90,7 +90,7 @@
             <div class="left" >
 
                 <div class="card" >
-                    <h1><i class="fa fa-sun-o m-orange" ></i> Текущи условия</h1>
+                    <h1><i class="fa fa-sun-o m-orange" ></i> Настоящи условия</h1>
                     <table class="tablespacer">
                         <tr><td>Външна температура</td><td>$current.outTemp</td></tr>
                         <tr><td><abbr title="Усещана температура, когато се отчете допълнителното изстиване на човешкото тяло на открито в следствие на вятъра.">Мразовитост<abbr></td><td>$current.windchill</td></tr>
@@ -103,7 +103,7 @@
                         <tr><td>Тенденция на барометъра ($trend.time_delta.hour.format("%.0f"))</td><td>$trend.barometer</td></tr>
                         <tr><td>Вятър</td><td>$current.windSpeed $current.windDir.ordinal_compass ($current.windDir)</td></tr>
                         <tr><td>Интензивност на дъжда</td><td>$current.rainRate</td></tr>
-                        <tr><td>Вътрешна температура</td><td>$current.inTemp</td></tr>
+                        <tr><td>Температура (вътре)</td><td>$current.inTemp</td></tr>
                         <tr><td><a href="http://stats.initlab.org/dashboard/db/particulate-matter-troyan?refresh=2m&orgId=1">Нива на фини прахови частици</a></tr></td>
                         #if $day.extraTemp1.has_data
                         <tr><td>Температура на езерото</td><td>$current.extraTemp1</td></tr>
@@ -156,8 +156,8 @@
                         <tr><td><abbr title="Средно квадратично">СК</abbr> на скоростта на вятъра</td><td>$day.wind.rms</td><td></td></tr>
                         <tr><td>Ср. скорост на векторите на вятъра</td><td>$day.wind.vecavg</td><td></td></tr>
                         <tr><td>Ср. посока на векторите на вятъра</td><td>$day.wind.vecdir</td><td></td></tr>
-                        <tr><td>Макс. вътрешна температура</td><td>$day.inTemp.max</td><td>$day.inTemp.maxtime</td></tr>
-                        <tr><td>Мин. вътрешна температура</td><td>$day.inTemp.min</td><td>$day.inTemp.mintime</td></tr>
+                        <tr><td>Макс. температура (вътре)</td><td>$day.inTemp.max</td><td>$day.inTemp.maxtime</td></tr>
+                        <tr><td>Мин. температура (вътре)</td><td>$day.inTemp.min</td><td>$day.inTemp.mintime</td></tr>
                         #if $day.extraTemp1.has_data
                         <tr><td>Макс. температура на езерото</td><td>$day.extraTemp1.max</td><td>$day.extraTemp1.maxtime</td></tr>
                         <tr><td>Мин. температура на езерото</td><td>$day.extraTemp1.min</td><td>$day.extraTemp1.mintime</td></tr>
